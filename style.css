@@ -1,0 +1,925 @@
+/* ОСНОВНЫЕ НАСТРОЙКИ */
+
+:root {
+    --background: #f7f5f1;
+    --white: #ffffff;
+    --text: #292724;
+    --muted: #858078;
+    --accent: #947d6c;
+    --border: #e8e3dc;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Manrope', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ШАПКА */
+
+.header {
+    width: 100%;
+    min-height: 90px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    background: var(--background);
+}
+
+.logo {
+    font-size: 29px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.navigation {
+    display: flex;
+    gap: 35px;
+}
+
+.navigation a {
+    font-size: 13px;
+    color: var(--muted);
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: var(--text);
+}
+
+.header-button {
+    padding: 14px 25px;
+    border: 1px solid var(--text);
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.header-button:hover {
+    background: var(--text);
+    color: var(--white);
+}
+
+.menu-button {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* ГЛАВНЫЙ ЭКРАН */
+
+.hero {
+    min-height: 650px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: 50px;
+}
+
+.hero-content {
+    max-width: 520px;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--accent);
+    margin-bottom: 28px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 5vw, 67px);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+.hero-description {
+    max-width: 400px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.primary-button {
+    display: inline-block;
+    padding: 18px 30px;
+    background: var(--text);
+    color: var(--white);
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.primary-button:hover {
+    background: var(--accent);
+}
+
+.hero-image {
+    width: 46%;
+    height: 460px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-note {
+    position: absolute;
+    bottom: 30px;
+    left: 8%;
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: var(--muted);
+}
+
+/* ВСТУПЛЕНИЕ */
+
+.intro {
+    padding: 110px 20px;
+    text-align: center;
+    background: var(--white);
+}
+
+.intro p {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--accent);
+    margin-bottom: 25px;
+}
+
+.intro h2,
+.services h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.intro span {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* УСЛУГИ */
+
+.services {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    margin-top: 55px;
+    text-align: left;
+}
+
+.service-card {
+    background: var(--white);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 340px;
+    display: block;
+    object-fit: cover;
+}
+
+.service-info {
+    padding: 25px 28px 30px;
+}
+
+.service-info span {
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.service-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 400;
+    margin: 12px 0;
+}
+
+.service-info p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* ЗАГЛУШКИ РАЗДЕЛОВ */
+
+#masters,
+#booking {
+    padding: 90px 8%;
+    text-align: center;
+    background: var(--white);
+}
+
+#masters h2,
+#booking h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 400;
+}
+
+/* ПОДВАЛ */
+
+footer {
+    padding: 60px 8%;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+footer p {
+    margin-top: 15px;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* АДАПТАЦИЯ */
+
+@media (max-width: 850px) {
+    .header {
+        padding: 0 5%;
+    }
+
+    .navigation {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 11px;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: var(--accent);
+}
+    .hero {
+        padding: 60px 5%;
+        gap: 30px;
+    }
+
+    .hero-image {
+        height: 380px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        min-height: 75px;
+    }
+
+    .navigation,
+
+.header-button {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .hero {
+        padding: 55px 6% 75px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 350px;
+    }
+
+    .hero-note {
+        left: 6%;
+    }
+
+    .intro {
+        padding: 80px 20px;
+    }
+
+    .intro h2,
+    .services h2 {
+        font-size: 33px;
+    }
+
+    .services {
+        padding: 75px 6%;
+    }
+}
+/* МАСТЕРА */
+
+.masters {
+    padding: 100px 8%;
+    text-align: center;
+    background: var(--white);
+}
+
+.masters h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 55px;
+}
+
+.masters-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px 30px;
+    text-align: left;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.master-card img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    display: block;
+}
+
+.master-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.master-card p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+    .masters {
+        padding: 75px 6%;
+    }
+
+    .masters h2 {
+        font-size: 32px;
+    }
+
+    .masters-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .master-card img {
+        height: 400px;
+    }
+}
+/* ЗАПИСЬ */
+
+.booking {
+    padding: 100px 20px;
+    text-align: center;
+    background: #eee9e1;
+}
+
+.booking h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.booking-description {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 35px;
+}
+
+.booking-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 17px;
+    border: 1px solid var(--border);
+    background: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+.booking-form button {
+    padding: 18px;
+    border: none;
+    background: var(--text);
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.booking-form button:hover {
+    background: var(--accent);
+}
+/* ЗАПИСЬ */
+
+.booking {
+    padding: 100px 20px;
+    text-align: center;
+    background: #eee9e1;
+}
+
+.booking h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.booking-description {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.booking-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 17px;
+    border: 1px solid var(--border);
+    background: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+.booking-form button {
+    padding: 18px;
+    border: none;
+    background: var(--text);
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.booking-form button:hover {
+    background: var(--accent);
+}
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: var(--text);
+    cursor: pointer;
+}
+
+@media (max-width: 850px) {
+    .menu-button {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        padding: 25px;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .header-button {
+        display: none;
+    }
+}
+.gallery {
+    padding: 100px 8%;
+    text-align: center;
+    background: var(--background);
+}
+
+.gallery h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.gallery-description {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 45px;
+    line-height: 1.8;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        padding: 75px 6%;
+    }
+
+    .gallery h2 {
+        font-size: 32px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .gallery-grid img {
+        height: 300px;
+    }
+}
+.reviews {
+    padding: 100px 8%;
+    text-align: center;
+    background: var(--white);
+}
+
+.reviews h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.reviews-description {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 50px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.review-card {
+    padding: 35px 25px;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+.review-stars {
+    color: #b39772;
+    letter-spacing: 4px;
+    font-size: 14px;
+}
+
+.review-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+    margin: 25px 0;
+}
+
+.review-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.review-card > span:last-child {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+@media (max-width: 850px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+    .reviews {
+        padding: 75px 6%;
+    }
+
+    .reviews h2 {
+        font-size: 32px;
+    }
+}
+.prices {
+    padding: 100px 20px;
+    text-align: center;
+    background: #eee9e1;
+}
+
+.prices h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.prices-description {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 45px;
+}
+
+.prices-list {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 15px 35px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    text-align: left;
+}
+
+.price-item:last-child {
+    border-bottom: none;
+}
+
+.price-item span:last-child {
+    color: var(--accent);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .prices {
+        padding: 75px 6%;
+    }
+
+    .prices h2 {
+        font-size: 32px;
+    }
+
+    .prices-list {
+        padding: 10px 20px;
+    }
+
+    .price-item {
+        font-size: 12px;
+        padding: 19px 0;
+    }
+}
+.promotions {
+    padding: 100px 8%;
+    text-align: center;
+    background: var(--background);
+}
+
+.promotions h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.promotions-description {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 50px;
+}
+
+.promotions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.promotion-card {
+    position: relative;
+    min-height: 260px;
+    padding: 35px;
+    background: #eee9e1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.promotion-number {
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.promotion-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 400;
+    margin: 25px 0 12px;
+}
+
+.promotion-card p {
+    max-width: 280px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.promotion-tag {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    color: var(--accent);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+}
+
+@media (max-width: 600px) {
+    .promotions {
+        padding: 75px 6%;
+    }
+
+    .promotions h2 {
+        font-size: 32px;
+    }
+
+    .promotions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .promotion-card {
+        min-height: 230px;
+        padding: 25px;
+    }
+}
+footer {
+    background: #292724;
+    color: #f7f5f1;
+    padding: 65px 8% 25px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.footer-brand .logo {
+    color: #f7f5f1;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.footer-brand .logo span {
+    color: #b99d86;
+}
+
+.footer-brand p,
+.footer-brand > span {
+    display: block;
+    color: #bcb5ad;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.footer-contact h3,
+.footer-social h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.footer-contact p,
+.footer-social a {
+    display: block;
+    color: #bcb5ad;
+    font-size: 12px;
+    line-height: 2.4;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #494640;
+    padding-top: 22px;
+    color: #918a82;
+    text-align: center;
+    font-size: 10px;
+}
+
+@media (max-width: 600px) {
+    footer {
+        padding: 55px 7% 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
